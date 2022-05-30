@@ -9,7 +9,6 @@ const songSchema = new Schema ({
     songArtist: String,
     songRuntime: Number,
     songGenre: String,
-    songType: String
 });
 
 const Song = mongoose.model('Song', songSchema);
