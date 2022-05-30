@@ -25,12 +25,21 @@ db.on('disconnected', () => console.log('Mongo disconnected'));
 // Body parser middleware: gives access to req.body
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
+app.use('/public', express.static('public'));
 app.use('/genres', genreController);
 app.use('/playlist', playlistController);
 app.use('/songs', songController);
 
 app.get('/', (req, res) => {
     res.render('index.ejs');
+});
+
+app.get('/contact', (req, res) => {
+    res.render('contacts/index.ejs');
+});
+
+app.get('/about', (req, res) => {
+    res.render('about/index.ejs')
 })
 
 // Listener
