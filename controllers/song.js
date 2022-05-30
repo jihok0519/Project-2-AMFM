@@ -4,25 +4,25 @@ const Song = require('../models/song');
 
 router.get('/', (req, res) => {
     Song.find({}, (err, foundSong) => {
-        res.render('songs/index.ejs', {
+        res.render('song/index.ejs', {
             song: foundSong
         });
     })
 });
 
 router.get('/new', (req, res) => {
-    res.render('songs/new.ejs');
+    res.render('song/new.ejs');
 });
 
 router.post('/', (req, res) => {
     Song.create(req.body, (err, createdSong) => {
-        res.redirect('/songs');
+        res.redirect('/song');
     });
 });
 
 router.get('/:id', (req, res) => {
     Song.findById(req.params.id, (err, foundSong) => {
-        res.render('songs/show.ejs', {
+        res.render('song/show.ejs', {
             song: foundSong
         });
     });
@@ -30,13 +30,13 @@ router.get('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     Song.findByIdAndRemove(req.params.id, () => {
-        res.redirect('/songs');
+        res.redirect('/song');
     });
 });
 
 router.get('/:id/edit', (req, res) => {
     Song.findById(req.params.id, (err, foundSong) => {
-        res.render('songs/edit.ejs', {
+        res.render('song/edit.ejs', {
             song: foundSong
         });
     });
@@ -44,7 +44,7 @@ router.get('/:id/edit', (req, res) => {
 
 router.put('/:id', (req, res) => {
     Song.findByIdAndUpdate(req.params.id, req.body, () => {
-        res.redirect('/songs');
+        res.redirect('/song');
     });
 });
 

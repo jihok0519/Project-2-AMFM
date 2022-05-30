@@ -16,7 +16,7 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res) => {
     Genre.create(req.body, (err, createdGenre) => {
-        res.redirect('/genres');
+        res.redirect('/genre');
     });
 });
 
@@ -38,7 +38,7 @@ router.get('/:id/edit', (req, res) => {
 
 router.put('/:id', (req, res) => {
     Genre.findByIdAndUpdate(req.params.id, req.body, () => {
-        res.redirect('/genres');
+        res.redirect('/genre');
     });
 });
 
