@@ -26,9 +26,9 @@ db.on('disconnected', () => console.log('Mongo disconnected'));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 app.use('/public', express.static('public'));
-app.use('/genres', genreController);
+app.use('/genre', genreController);
 app.use('/playlist', playlistController);
-app.use('/songs', songController);
+app.use('/song', songController);
 
 app.get('/', (req, res) => {
     res.render('index.ejs');
