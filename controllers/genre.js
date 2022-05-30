@@ -5,13 +5,13 @@ const Genre = require('../models/genre');
 router.get('/', (req, res) => {
     Genre.find({}, (err, foundGenre) => {
         res.render('genre/index.ejs', {
-            genres: foundGenre
+            genre: foundGenre
         });
     })
 });
 
 router.get('/new', (req, res) => {
-    res.render('genres/new.ejs');
+    res.render('genre/new.ejs');
 });
 
 router.post('/', (req, res) => {
@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     Genre.findById(req.params.id, (err, foundGenre) => {
-        res.render('genres/show.ejs', {
+        res.render('genre/show.ejs', {
             genre: foundGenre
         });
     });
@@ -30,7 +30,7 @@ router.get('/:id', (req, res) => {
 
 router.get('/:id/edit', (req, res) => {
     Genre.findById(req.params.id, (err, foundGenre) => {
-        res.render('genres/edit.ejs', {
+        res.render('genre/edit.ejs', {
             genre: foundGenre
         });
     });
