@@ -3,12 +3,15 @@ const express = require('express');
 const app = express();
 require("dotenv").config();
 const mongoose = require('mongoose');
-// const methodOverride = require('method-override');
+const genreController = require('./controllers/genre.js');
+const songController = require('./controllers/song.js');
+const playlistController = require('./controllers/playlist.js');
+const methodOverride = require('method-override');
 
 // Connect to MongoDB Atlas
 mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
-	// useUnifiedTopology: true,
+	useUnifiedTopology: true,
 });
 
 // Database Connection Error/Success
@@ -20,10 +23,12 @@ db.on('disconnected', () => console.log('Mongo disconnected'));
 
 // Middleware
 // Body parser middleware: gives access to req.body
-// app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
+app.use('/genres', genreController);
+app.use('/playlist', playlistController);
+app.use('/songs', songController);
 
-// Route
 app.get('/', (req, res) => {
     res.render('index.ejs');
 })
