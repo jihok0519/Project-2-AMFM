@@ -12,6 +12,6 @@ const songSchema = new Schema ({
     songType: String
 });
 
-const Playlist = mongoose.model('Playlist', playlistSchema);
+const Song = mongoose.model('Song', songSchema);
 
-module.exports = Playlist;
+module.exports = Song;
