@@ -4,22 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/assets/style.css">    
     <title>AMFM Contact</title>
 </head>
 <body>
     <header>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <h1>AMFM</h1>
-        <h2>Contact Information</h2>
+        <div class="header">
+            <div class="inner_header">
+                <div class="logo_container">
+                    <h1><a href="/">AMFM</h1>
+                </div>
+                    <ul class="navigation">
+                        <a href="/"><li>Home</li></a>
+                        <a href="/about"><li>About</li></a>
+                        <a href="/contact"><li>Contact</li></a>
+                    </ul>
+            </div>
+        </div>
     </header>
-    <a href="https://www.linkedin.com/in/enochkim-se/">LinkedIn</a>
-    <a href="https://github.com/jihok0519">Github</a>
+    <p>Thanks for taking a look at AMFM! I have linked my <a href="https://github.com/jihok0519"><b>Github</b></a> and <a href="https://www.linkedin.com/in/enochkim-se/"><b>LinkedIn</b></a> for those that want to look at other projects I've done or if you want to get in contact with me. Viva la Musica!</p>
 </body>
 </html>
 <style>
-    body {
-    font-family: 'Montserrat', sans-serif;
+     * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
     }
+    .header {
+        width: 100%;
+        height: 80px;
+        display: block;
+        background-color: #101010;
+    }
+    .inner_header {
+        width: 1000px;
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    .logo_container {
+        height: 100%;
+        display: table;
+        float: left;
+    }
+    .logo_container h1 {
+        color: azure;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 32px;
+        font-weight: 800;
+    }
+    .navigation {
+        float: right;
+        height: 100%;
+    }
+    .navigation a {
+        height: 100%;
+        display: table;
+        float: left;
+        padding: 0px 20px;
+    }
+    .navigation a li {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+        color: white;
+        font-family: 16px;
+    }
+    .navigation a:last-child {
+        padding-right: 0px;
+    }
+    a {
+        color: white;
+    }
+    body {
+        background-color: rgb(48, 47, 44);
+    }
+    p {
+        color: azure;
+        margin: 50px 300px;
+        border-style: solid;
+        border-color: gray;
+        font-size: 36px;
+        border-radius: 15px;
+        border-width: 4px;
+    }
+    
 </style>
