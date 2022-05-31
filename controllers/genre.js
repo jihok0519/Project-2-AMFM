@@ -10,10 +10,6 @@ router.get('/', (req, res) => {
     })
 });
 
-router.get('/new', (req, res) => {
-    res.render('genre/new.ejs');
-});
-
 router.post('/', (req, res) => {
     Genre.create(req.body, (err, createdGenre) => {
         res.redirect('/genre');
@@ -23,14 +19,6 @@ router.post('/', (req, res) => {
 router.get('/:id', (req, res) => {
     Genre.findById(req.params.id, (err, foundGenre) => {
         res.render('genre/show.ejs', {
-            genre: foundGenre
-        });
-    });
-});
-
-router.get('/:id/edit', (req, res) => {
-    Genre.findById(req.params.id, (err, foundGenre) => {
-        res.render('genre/edit.ejs', {
             genre: foundGenre
         });
     });
