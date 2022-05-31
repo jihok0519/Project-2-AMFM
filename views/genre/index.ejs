@@ -24,11 +24,30 @@
     <table>
         <tr>
             <td>
-                <a href="/song">hip-hop</a>
-            </br>
-                <a href="/song">electronic</a>
-            </br>
-                <a href="/song">pop</a>
+                <a href="/song"><div class ="genres" id="hiphop"><b>Hip-Hop and R&B</b></div></a>
+    
+               <a href="/song"><div class ="genres" id="edm"><b>EDM</b></div></a>
+            
+               <a href="/song"><div class ="genres" id="pop"><b>Pop</b></div></a>
+        
+                <a href="/song"><div class ="genres" id="classical"><b>Classical</b></div></a>
+            
+                <a href="/song"><div class ="genres" id="rock"><b>Rock</b></div></a>
+          
+                <a id="jazz" href="/song"><div class ="genres" id="jazz"><b>Jazz</b></div></a>
+            
+                <a href="/song"><div class ="genres" id="blues"><b>Blues</b></div></a>
+
+                <a id="folk" href="/song"><div class ="genres" id="folk"><b>Folk</b></div></a>
+            
+                <a id="country" href="/song"><div class ="genres" id="country"><b>Country</b></div></a>
+            
+                <a id="latin" href="/song"><div class ="genres" id="latin"><b>Latin</b></div></a>
+            
+                <a id="disco" href="/song"><div class ="genres" id="indie"><b>Indie</b></div></a>
+            
+                <a href="/song"><div class ="genres" id="reggae"><b>Reggae</b></div></a>
+            
             </td>
         </tr>
     </table>
@@ -88,9 +107,70 @@
         padding-right: 0px;
     }
     a {
-        color: white;
+        color: azure;
     }
     body {
         background-color: rgb(48, 47, 44);
+    }
+    .genres {
+        display: inline;
+        height: 150px;
+        width: 200px;
+        border: 2px solid black;
+        border-radius: 7px;
+        float: left;
+        margin: 20px;
+        padding: 57px;
+        text-align: center;
+        font-size: 24px;  
+    }
+    #hiphop {
+        background-image: url("../public/assets/images/hiphop.jpg");
+        background-size: 51vh;
+    }
+    #edm {
+        background-image: url("../public/assets/images/edm.jpg");
+        background-size: 51vh;
+    }
+    #pop {
+        background-image: url("../public/assets/images/pop.jpg");
+        background-size: 51vh;
+    }
+    #classical {
+        background-image: url("../public/assets/images/classical.jpg");
+        background-size: 51vh;
+
+    }
+    #rock {
+        background-image: url("../public/assets/images/rock.jpg");
+        background-size: 51vh;
+    }
+    #jazz {
+        background-image: url("../public/assets/images/jazz.jpg");
+        background-size: 51vh;
+    }
+    #blues {
+        background-image: url("../public/assets/images/blues.jpg");
+        background-size: 51vh;
+    }
+    #folk {
+        background-image: url("../public/assets/images/folk.jpg");
+        background-size: 52vh;
+    }
+    #country {
+         background-image: url("../public/assets/images/country.jpg");
+        background-size: 51vh;
+    }
+    #latin {
+         background-image: url("../public/assets/images/latin.jpg");
+        background-size: 48vh;
+    }
+    #indie {
+         background-image: url("../public/assets/images/indie.jpg");
+        background-size: 51vh;
+    }
+    #reggae {
+         background-image: url("../public/assets/images/reggae.jpg");
+        background-size: 51vh;
     }
 </style>
