@@ -21,8 +21,18 @@
             </div>
         </div>
     </header>
+    <a href="/playlist">Go to playlist</a>
+    <a class="genre" href="/genre">Back to genres</a>
     <ul>
-       <div class="song">Song</div>
+        <div class="song"><b>Songs</b> </br>
+            <% for(let i = 0; i < song.length; i++) { %>
+        <ul class ="info">
+            <a href="/song/<%=song[i]._id %>"><%= song[i].songName %></a>
+        </ul>
+        <% } %>
+    </div>
+        <a class="new" href="/song/new">Add new song</a>
+        <a class="edit" href="/song/<%=song._id%>/edit">Edit song</a>
     </ul>
 </body>
 </html>
@@ -90,10 +100,21 @@
         text-align: center;
         color: white;
         border: 3px solid black;
-        border-radius: 3px;
+        border-radius: 11px;
         width: 70vh;
         height: 70vh;
         position: block;
         margin: 50px 440px;
+    }
+    .edit {
+        float: right;
+    }
+    .genre {
+        float: right;
+    }
+    .info {
+        text-align: left;
+        margin: 20px;
+        font-size: 30px;
     }
 </style>

@@ -22,8 +22,20 @@
             </div>
         </div>
     </header>
+    <a href="/playlist">Go to playlist</a>
+    <a class="genre" href="/genre">Back to genres</a>
     <ul>
-        <li></li>
+        <div class="song"><b>Songs</b> </br>
+        <ul class ="info">
+            <li>Song Title: <%= song.songName %></li>
+            <li>Artist: <%= song.songArtist %></li>
+            <li>Album: <%= song.albumName %></li>
+            <li>Release Date: <%= song.dateReleased %></li>
+            <li>Genre: <%= song.genreName %></li>
+        </ul>
+    </div>
+        <a class="new" href="/song/new">Add new song</a>
+        <a class="edit" href="/song/<%=song._id%>/edit">Edit song</a>
     </ul>
 </body>
 </html>
@@ -85,5 +97,28 @@
     }
     body {
         background-color: rgb(48, 47, 44);
+    }
+    .song {
+    font-size: 42px;
+        text-align: center;
+        color: white;
+        border: 3px solid black;
+        border-radius: 11px;
+        width: 70vh;
+        height: 70vh;
+        position: block;
+        margin: 50px 440px;
+    }
+    .edit {
+        float: right;
+    }
+    .genre {
+        float: right;
+    }
+    .info {
+        text-align: left;
+        margin: 20px;
+        font-size: 30px;
+        
     }
 </style>
