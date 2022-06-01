@@ -21,6 +21,25 @@
             </div>
         </div>
     </header>
+    <ul>
+        <div class="song">
+            <b>Song</b> 
+            <main>
+                <h2>Song Info:</h2>
+                <form action="/song/<%= song._id %>?_method=PUT" method="POST">
+                    <input type="text" name="coverAlbum" value="<%= song.coverAlbum %>" /><br />
+                    <input type="text" name="songName" value="<%= song.songName %>" /><br />
+                    <input type="text" name="songArtist" value="<%= song.songArtist %>" /><br />
+                    <input type="text" name="dateReleased" value="<%= song.dateReleased %>" /><br />
+                    <input type="text" name="albumName" value="<%= song.albumName %>" /><br />
+                    <input type="text" name="genreName" value="<%= song.genreName %>" /><br />
+                    <input type="submit" value="Update Song" />
+                </form>
+            </main>
+        </div>
+        <a href="/song">Back to songs</a>
+        <a class ="new "href="/song/new">Add new song</a>
+    </ul>
 </body>
 </html>
 <style>
@@ -81,5 +100,25 @@
     }
     body {
         background-color: rgb(48, 47, 44);
+    }
+    .song {
+    font-size: 42px;
+        text-align: center;
+        color: white;
+        border: 3px solid black;
+        border-radius: 11px;
+        width: 70vh;
+        height: 70vh;
+        position: block;
+        margin: 50px 440px;
+    }
+    .new {
+        float: right;
+    }
+    .edit {
+        float: right;
+    }
+    .genre {
+        float: right;
     }
 </style>
