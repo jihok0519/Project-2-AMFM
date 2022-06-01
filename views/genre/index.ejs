@@ -22,33 +22,16 @@
         </div>
     </header>
     <table>
+        <% for (let i = 0; i < genre.length; i++) { %>
         <tr>
             <td>
-                <a href="/song"><div class ="genres" id="hiphop"><b>Hip-Hop and R&B</b></div></a>
-    
-               <a href="/song"><div class ="genres" id="edm"><b>EDM</b></div></a>
-            
-               <a href="/song"><div class ="genres" id="pop"><b>Pop</b></div></a>
-        
-                <a href="/song"><div class ="genres" id="classical"><b>Classical</b></div></a>
-            
-                <a href="/song"><div class ="genres" id="rock"><b>Rock</b></div></a>
-          
-                <a id="jazz" href="/song"><div class ="genres" id="jazz"><b>Jazz</b></div></a>
-            
-                <a href="/song"><div class ="genres" id="blues"><b>Blues</b></div></a>
-
-                <a id="folk" href="/song"><div class ="genres" id="folk"><b>Folk</b></div></a>
-            
-                <a id="country" href="/song"><div class ="genres" id="country"><b>Country</b></div></a>
-            
-                <a id="latin" href="/song"><div class ="genres" id="latin"><b>Latin</b></div></a>
-            
-                <a id="disco" href="/song"><div class ="genres" id="indie"><b>Indie</b></div></a>
-            
-                <a href="/song"><div class ="genres" id="reggae"><b>Reggae</b></div></a>
-            
+                <a class ="genres" href="/genre/<%=genre[i]._id%>">
+                    <div id="<%=genre[i].genreName%>">
+                        <b><%=genre[i].genreName%></b>
+                    </div>
+                </a>
             </td>
+            <% } %>
         </tr>
     </table>
 </body>
@@ -122,54 +105,54 @@
         margin: 20px;
         padding: 57px;
         text-align: center;
-        font-size: 24px;  
+        font-size: 24px;
     }
-    #hiphop {
+    #HipHop {
         background-image: url("../public/assets/images/hiphop.jpg");
         background-size: 51vh;
     }
-    #edm {
+    #EDM {
         background-image: url("../public/assets/images/edm.jpg");
         background-size: 51vh;
     }
-    #pop {
+    #Pop {
         background-image: url("../public/assets/images/pop.jpg");
         background-size: 51vh;
     }
-    #classical {
+    #Classical {
         background-image: url("../public/assets/images/classical.jpg");
         background-size: 51vh;
 
     }
-    #rock {
+    #Rock {
         background-image: url("../public/assets/images/rock.jpg");
         background-size: 51vh;
     }
-    #jazz {
+    #Jazz {
         background-image: url("../public/assets/images/jazz.jpg");
         background-size: 51vh;
     }
-    #blues {
+    #Blues {
         background-image: url("../public/assets/images/blues.jpg");
         background-size: 51vh;
     }
-    #folk {
+    #Folk {
         background-image: url("../public/assets/images/folk.jpg");
         background-size: 52vh;
     }
-    #country {
+    #Country {
          background-image: url("../public/assets/images/country.jpg");
         background-size: 51vh;
     }
-    #latin {
+    #Latin {
          background-image: url("../public/assets/images/latin.jpg");
         background-size: 48vh;
     }
-    #indie {
+    #Indie {
          background-image: url("../public/assets/images/indie.jpg");
         background-size: 51vh;
     }
-    #reggae {
+    #Reggae {
          background-image: url("../public/assets/images/reggae.jpg");
         background-size: 51vh;
     }
