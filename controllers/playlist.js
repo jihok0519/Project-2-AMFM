@@ -12,22 +12,22 @@ router.get('/', (req, res) => {
 });
 
 // New
-router.get('/new', (req, res) => {
-    res.render('playlist/new.ejs');
-});
+// router.get('/new', (req, res) => {
+//     res.render('playlist/new.ejs');
+// });
 
-router.post('/', (req, res) => {
-    Playlist.create(req.body, (err, createdPlaylist) => {
-        res.redirect('/playlist');
-    });
-});
+// router.post('/', (req, res) => {
+//     Playlist.create(req.body, (err, createdPlaylist) => {
+//         res.redirect('/playlist');
+//     });
+// });
 
 // Delete
-router.delete('/:id', (req, res) => {
-    Playlist.findByIdAndRemove(req.params.id, () => {
-        res.redirect('/playlist');
-    });
-});
+// router.delete('/:id', (req, res) => {
+//     Playlist.findByIdAndRemove(req.params.id, () => {
+//         res.redirect('/playlist');
+//     });
+// });
 
 // Update
 router.put('/:id', (req, res) => {
@@ -46,12 +46,12 @@ router.get('/:id/edit', (req, res) => {
 });
 
 // Show
-router.get('/:id', (req, res) => {
-    Playlist.findById(req.params.id, (err, foundPlaylist) => {
-        res.render('playlist/show.ejs', {
-            playlist: foundPlaylist
-        });
-    });
-});
+// router.get('/:id', (req, res) => {
+//     Playlist.findById(req.params.id, (err, foundPlaylist) => {
+//         res.render('playlist/show.ejs', {
+//             playlist: foundPlaylist
+//         });
+//     });
+// });
 
 module.exports = router;
