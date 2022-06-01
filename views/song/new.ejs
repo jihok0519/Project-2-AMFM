@@ -22,6 +22,25 @@
             </div>
         </div>
     </header>
+    <a href="/playlist">Go to playlist</a>
+    <a class="genre" href="/genre">Back to genres</a>
+    <ul>
+        <div class="song">
+            <b>Songs</b> </br>
+            <main>
+                <form action="/song" method="POST">
+                    <input type="text" name="coverAlbum" placeholder="Cover Album URL"/>
+                    <input type="text" name="songName" placeholder="Song Name"/>
+                    <input type="text" name="songArtist" placeholder="Artist"/>
+                    <input type="number" name="dateReleased" placeholder="Date Released"/>
+                    <input type="text" name="albumName" placeholder="Album Name"/>
+                    <input type="text" name="genreName" placeholder="Genre"/>
+                    <input type="submit" value="Create Song" />
+                </form>
+            </main>
+        </div>
+        <a class="new" href="/song/">Back to songs</a>
+    </ul>
 </body>
 </html>
 <style>
@@ -82,5 +101,22 @@
     }
     body {
         background-color: rgb(48, 47, 44);
+    }
+    .song {
+    font-size: 42px;
+        text-align: center;
+        color: white;
+        border: 3px solid black;
+        border-radius: 11px;
+        width: 70vh;
+        height: 70vh;
+        position: block;
+        margin: 50px 440px;
+    }
+    .edit {
+        float: right;
+    }
+    .genre {
+        float: right;
     }
 </style>
