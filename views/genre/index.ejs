@@ -23,12 +23,10 @@
     </header>
     <table>
         <% for (let i = 0; i < genre.length; i++) { %>
-        <tr>
+        <tr class='genres' id="<%=genre[i].genreName%>">
             <td>
-                <a class ="genres" href="/genre/<%=genre[i]._id%>">
-                    <div id="<%=genre[i].genreName%>">
+                <a href="/song">
                         <b><%=genre[i].genreName%></b>
-                    </div>
                 </a>
             </td>
             <% } %>
