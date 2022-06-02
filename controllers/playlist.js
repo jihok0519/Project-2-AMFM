@@ -30,14 +30,14 @@ router.get("/", (req, res) => {
 // });
 
 // Update
-router.put("/:id", (req, res) => {
+router.put("/", (req, res) => {
 	Playlist.findByIdAndUpdate(req.params.id, req.body, () => {
 		res.redirect("/playlist");
 	});
 });
 
 // Edit
-router.get("/:id/edit", (req, res) => {
+router.get("/edit", (req, res) => {
 	Playlist.findById(req.params.id, (err, foundPlaylist) => {
 		res.render("playlist/edit.ejs", {
 			playlist: foundPlaylist,
