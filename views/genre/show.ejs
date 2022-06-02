@@ -11,8 +11,8 @@
         <div class="header">
             <div class="inner_header">
                 <div class="logo_container">
-                    <h1><a href="/">AMFM</h1>
-                </div>
+                    <h1 class="h1"><a href="/">AMFM</h1>
+                    </div>
                     <ul class="navigation">
                         <a href="/"><li>Home</li></a>
                         <a href="/about"><li>About</li></a>
@@ -24,8 +24,7 @@
     <a href="/playlist">Go to playlist</a>
     <a class="genre" href="/genre">Back to genres</a>
     <ul>
-        <div class="song"><b><%=genre.genreName%> Songs</b> </br>
-            <a href="/song/"><%=song.songName%></a>
+        <div class="song"><b><%=genre.genreName%> Songs</b></br>
     </div>
         <a class="new" href="/song/new">Add new song</a>
     </ul>
@@ -80,6 +79,11 @@
         height: 100%;
         color: white;
         font-family: 16px;
+    }
+    .navigation a li:hover {
+        color: azure;
+        font-size: 20px;
+        transition: 0.5s;
     }
     .navigation a:last-child {
         padding-right: 0px;

@@ -11,7 +11,7 @@
         <div class="header">
             <div class="inner_header">
                 <div class="logo_container">
-                    <h1><a href="/">AMFM</h1>
+                    <h1 class="h1"><a href="/">AMFM</h1>
                 </div>
                     <ul class="navigation">
                         <a href="/"><li>Home</li></a>
@@ -31,6 +31,11 @@
         list-style: none;
         text-decoration: none;
         font-family: 'Montserrat', sans-serif;
+    }
+    .h1:hover {
+        color: azure;
+        font-size: 36px;
+        transition: 0.5s;
     }
     .header {
         width: 100%;
@@ -74,6 +79,11 @@
         color: white;
         font-family: 16px;
     }
+    .navigation a li:hover {
+        color: azure;
+        font-size: 20px;
+        transition: 0.5s;
+    }
     .navigation a:last-child {
         padding-right: 0px;
     }
@@ -91,5 +101,7 @@
         font-size: 36px;
         border-radius: 15px;
         border-width: 4px;
+        line-height: 1.5;
+        padding: 30px;
     }
 </style>

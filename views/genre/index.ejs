@@ -11,8 +11,8 @@
         <div class="header">
             <div class="inner_header">
                 <div class="logo_container">
-                    <h1><a href="/">AMFM</h1>
-                </div>
+                    <h1 class="h1"><a href="/">AMFM</h1>
+                    </div>
                     <ul class="navigation">
                         <a href="/"><li>Home</li></a>
                         <a href="/about"><li>About</li></a>
@@ -23,9 +23,9 @@
     </header>
     <table>
         <% for (let i = 0; i < genre.length; i++) { %>
-        <tr class='genres' id="<%=genre[i].genreName%>">
+       <a href="/song"><tr class='genres' id="<%=genre[i].genreName%>"></a>
             <td>
-                <a href="/song">
+                <a id="genreSelection"href="/song">
                         <b><%=genre[i].genreName%></b>
                 </a>
             </td>
@@ -41,6 +41,11 @@
         list-style: none;
         text-decoration: none;
         font-family: 'Montserrat', sans-serif;
+    }
+    .h1:hover {
+        color: azure;
+        font-size: 36px;
+        transition: 0.5s;
     }
     .header {
         width: 100%;
@@ -84,6 +89,11 @@
         color: white;
         font-family: 16px;
     }
+    .navigation a li:hover {
+        color: azure;
+        font-size: 20px;
+        transition: 0.5s;
+    }
     .navigation a:last-child {
         padding-right: 0px;
     }
@@ -104,6 +114,11 @@
         padding: 57px;
         text-align: center;
         font-size: 24px;
+    }
+    #genreSelection:hover {
+        color: azure;
+        font-size: 30px;
+        transition: 0.5s;
     }
     #HipHop {
         background-image: url("../public/assets/images/hiphop.jpg");

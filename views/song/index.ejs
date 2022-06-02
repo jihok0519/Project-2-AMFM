@@ -11,8 +11,8 @@
         <div class="header">
             <div class="inner_header">
                 <div class="logo_container">
-                    <h1><a href="/">AMFM</h1>
-                </div>
+                    <h1 class="h1"><a href="/">AMFM</h1>
+                    </div>
                     <ul class="navigation">
                         <a href="/"><li>Home</li></a>
                         <a href="/about"><li>About</li></a>
@@ -21,8 +21,8 @@
             </div>
         </div>
     </header>
-    <a href="/playlist">Go to playlist</a>
-    <a class="genre" href="/genre">Back to genres</a>
+    <a id="links" href="/playlist">Go to playlist</a>
+    <a id="links" class="genre" href="/genre">Back to genres</a>
     <ul>
         <div class="song"><b>Songs</b> </br>
             <% for(let i = 0; i < song.length; i++) { %>
@@ -31,8 +31,7 @@
         </ul>
         <% } %>
     </div>
-        <a class="new" href="/song/new">Add new song</a>
-        <a class="edit" href="/song/<%=song._id%>/edit">Edit song</a>
+        <a id="links" class="new" href="/song/new">Add new song</a>
     </ul>
 </body>
 </html>
@@ -43,6 +42,11 @@
         list-style: none;
         text-decoration: none;
         font-family: 'Montserrat', sans-serif;
+    }
+    .h1:hover {
+        color: azure;
+        font-size: 36px;
+        transition: 0.5s;
     }
     .header {
         width: 100%;
@@ -86,6 +90,11 @@
         color: white;
         font-family: 16px;
     }
+    .navigation a li:hover {
+        color: azure;
+        font-size: 20px;
+        transition: 0.5s;
+    }
     .navigation a:last-child {
         padding-right: 0px;
     }
@@ -116,5 +125,10 @@
         text-align: left;
         margin: 20px;
         font-size: 30px;
+    }
+    #links:hover {
+        color: azure;
+        font-size: 18px;
+        transition: .5s;
     }
 </style>
