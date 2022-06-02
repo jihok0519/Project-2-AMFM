@@ -26,8 +26,11 @@
     <ul>
         <div class="song"><b>Songs</b> </br>
             <% for(let i = 0; i < song.length; i++) { %>
-        <ul class ="info">
-            <a href="/song/<%=song[i]._id %>"><%= song[i].songName %></a>
+                <ul class ="info">
+                    <a href="/song/<%=song[i]._id %>"><%= song[i].songName %>, <%= song[i].songArtist %></a>
+                    <form class="delete"action="/song/<%= song[i]._id %>?_method=DELETE" method="POST">
+                        <input type="submit" value="Delete" />
+                    </form>
         </ul>
         <% } %>
     </div>
