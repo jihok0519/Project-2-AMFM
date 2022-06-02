@@ -1,14 +1,14 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const Playlist = require('../models/playlist');
+const Playlist = require("../models/playlist");
 
 // Index
-router.get('/', (req, res) => {
-    Playlist.find({}, (err, foundPlaylist) => {
-        res.render('playlist/index.ejs', {
-            playlist: foundPlaylist
-        });
-    })
+router.get("/", (req, res) => {
+	Playlist.find({}, (err, foundPlaylist) => {
+		res.render("playlist/index.ejs", {
+			playlist: foundPlaylist,
+		});
+	});
 });
 
 // New
@@ -30,19 +30,19 @@ router.get('/', (req, res) => {
 // });
 
 // Update
-router.put('/:id', (req, res) => {
-    Playlist.findByIdAndUpdate(req.params.id, req.body, () => {
-        res.redirect('/playlist');
-    });
+router.put("/:id", (req, res) => {
+	Playlist.findByIdAndUpdate(req.params.id, req.body, () => {
+		res.redirect("/playlist");
+	});
 });
 
 // Edit
-router.get('/:id/edit', (req, res) => {
-    Playlist.findById(req.params.id, (err, foundPlaylist) => {
-        res.render('playlist/edit.ejs', {
-            playlist: foundPlaylist
-        });
-    });
+router.get("/:id/edit", (req, res) => {
+	Playlist.findById(req.params.id, (err, foundPlaylist) => {
+		res.render("playlist/edit.ejs", {
+			playlist: foundPlaylist,
+		});
+	});
 });
 
 // Show
