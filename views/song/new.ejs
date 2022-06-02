@@ -23,23 +23,31 @@
         </div>
     </header>
     <a id="links" href="/playlist">Go to playlist</a>
-    <a id="links" class="genre" href="/genre">Back to genres</a>
+</br>
+    <a id="links" href="/genre">Back to genres</a>
+</br>
+    <a id="links" href="/song">Back to songs</a>
     <ul>
         <div class="song">
             <b>Songs</b> </br>
             <main>
                 <form action="/song" method="POST">
                     <input type="text" name="coverAlbum" placeholder="Cover Album URL"/>
+                </br>
                     <input type="text" name="songName" placeholder="Song Name"/>
+                </br>
                     <input type="text" name="songArtist" placeholder="Artist"/>
+                </br>
                     <input type="number" name="dateReleased" placeholder="Date Released"/>
+                </br>
                     <input type="text" name="albumName" placeholder="Album Name"/>
+                </br>
                     <input type="text" name="genreName" placeholder="Genre"/>
+                </br>
                     <input type="submit" value="Create Song" />
                 </form>
             </main>
         </div>
-        <a id="links" class="new" href="/song/">Back to songs</a>
     </ul>
 </body>
 </html>
@@ -122,12 +130,6 @@
         height: 70vh;
         position: block;
         margin: 50px 440px;
-    }
-    .edit {
-        float: right;
-    }
-    .genre {
-        float: right;
     }
     #links:hover {
         color: azure;

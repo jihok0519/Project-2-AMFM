@@ -23,9 +23,14 @@
         </div>
     </header>
     <a id="links" href="/playlist">Go to playlist</a>
-    <a id="links" class="genre" href="/genre">Back to genres</a>
+</br>
+    <a id="links" href="/genre">Back to genres</a>
+</br>
+    <a id="links" href="/song/<%=song._id%>/edit">Edit song</a>
+</br>
+    <a id="links" href="/song">Back to songs</a>
     <ul>
-        <div class="song"><b>Songs</b> </br>
+        <div class="song"><b>Song</b> </br>
         <ul class ="info">
             <li><img src="<%= song.coverAlbum %>"></li>
             <li>Song Title: <%= song.songName %></li>
@@ -33,10 +38,11 @@
             <li>Album: <%= song.albumName %></li>
             <li>Release Date: <%= song.dateReleased %></li>
             <li>Genre: <%= song.genreName %></li>
+            <form action="/playlist/<%= song._id %>?_method=PUT" method="POST">
+                <input type="submit" value="Add to playlist" />
+            </form>
         </ul>
     </div>
-    <a id="links" href="/playlist">Add song to playlist</a>
-        <a id="links" class="edit" href="/song/<%=song._id%>/edit">Edit song</a>
     </ul>
 </body>
 </html>
@@ -119,12 +125,6 @@
         height: 70vh;
         position: block;
         margin: 50px 440px;
-    }
-    .edit {
-        float: right;
-    }
-    .genre {
-        float: right;
     }
     .info {
         text-align: left;

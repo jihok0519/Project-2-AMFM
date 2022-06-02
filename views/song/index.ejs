@@ -23,7 +23,12 @@
         </div>
     </header>
     <a id="links" href="/playlist">Go to playlist</a>
-    <a id="links" class="genre" href="/genre">Back to genres</a>
+</br>
+    <a id="links" href="/genre">Back to genres</a>
+</br>
+    <a id="links" href="/song">Back to songs</a>
+</br>
+    <a id="links" href="/song/new">Add new song</a>
     <ul>
         <div class="song"><b>Songs</b> </br>
             <% for(let i = 0; i < song.length; i++) { %>
@@ -35,7 +40,6 @@
         </ul>
         <% } %>
     </div>
-        <a id="links" class="new" href="/song/new">Add new song</a>
     </ul>
 </body>
 </html>
@@ -118,12 +122,6 @@
         height: 70vh;
         position: block;
         margin: 50px 440px;
-    }
-    .edit {
-        float: right;
-    }
-    .genre {
-        float: right;
     }
     .info {
         text-align: left;
