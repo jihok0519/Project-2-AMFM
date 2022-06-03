@@ -3,7 +3,7 @@
 #### A full crud web app designed to help find new songs.
 
 ## Description
-"AMFM" is my first attempt to create a multi-page website. I wanted to design an app which is intuitive, and also useful to anyone who uses it.
+"AMFM" is my first attempt to create a multi-page website. AMFM will let the user create a playlist from a selection of genres. Each genre page will randomly generate songs in that genre. I wanted to design an app which is intuitive, and also useful to anyone who uses it.
 ## Table of Contents
 * [Technologies Used](#technologiesused)
 * [Features](#features)
